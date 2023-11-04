@@ -1,0 +1,81 @@
+#include<iostream>
+
+#include<cstdlib>
+
+int main()
+
+{
+
+    int N=100;
+
+    int n;
+
+    int r=rand()%N;
+
+    do //Coded by Mac!
+
+    {
+
+        std::cout<<"\nGuess the Number (betn 1 to 100): ";
+
+        std::cin>>n;
+
+        if(n>=1 && n<=100)
+
+        {
+
+            if(n==r)
+
+            {
+
+                std::cout<<"\nCongo! You guessed it right.";
+
+            }
+
+            else
+
+            {
+
+                if(n<(r-2))
+
+                {
+
+                    std::cout<<"\nToo Low!";
+
+                }
+
+                else if(n>(r+2))
+
+                {
+
+                    std::cout<<"\nToo High!";
+
+                }
+
+                else
+
+                {
+
+                    std::cout<<"\nClose Enough";
+
+                }
+
+            }
+
+        }
+
+        else
+
+        {
+
+            std::cout<<"\nPlease enter within the given range";
+
+        }
+
+    }while(n!=r);
+
+   
+
+    return 0;
+
+}
